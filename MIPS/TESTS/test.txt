@@ -1,0 +1,5 @@
+00641020     Hexadecimal
+
+011 00100 00010 00000 100000      Binaire
+
+$3   $4    $2     -    ADD    Instruction
