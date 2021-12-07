@@ -1,7 +1,7 @@
-#include "fonctions.h"
+#include "fonction.h"
 
 
-int ADD(char *T, int n){
+int add(char *T, int n){
   int B[32];
   int j;
   int i;
@@ -12,6 +12,7 @@ int ADD(char *T, int n){
   int constant = 0;
   int compteur2 = 0;
   int sum = 0;
+	
 
   for(j=0; j<32; j++){
     B[j]=0;
@@ -22,8 +23,8 @@ int ADD(char *T, int n){
     int compteur1 = 0;
     k = k+1;
     while(T[k] != ' '){
-      temp[compteur] = T[k];
-      compteur++;
+      temp[compteur1] = T[k];
+      compteur1++;
   }
 
   for(j=0;j<5;j++){
@@ -31,19 +32,21 @@ int ADD(char *T, int n){
   }
 
   if(temp[0] == '$'){
-    decimal = atoi(temp[1]); /* convertir char en int */
+    decimal = (int)temp[1];
+    decimal = decimal - 48;
+    /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 == 0){
       bin_temp1[constant+j] = decimal%2;
       j--;
     }
-    if(i=1){
+    if(i==1){
       compteur2 = 0;
       for(j=16;j<21;j++){
         B[j] = bin_temp1[compteur2];
         compteur2++;
       }
     }
-    else if(i=2){
+    else if(i==2){
       compteur2 = 0;
       for(j=6;j<11;j++){
         B[j] = bin_temp1[compteur2];
@@ -61,7 +64,8 @@ int ADD(char *T, int n){
   }
   compteur2 = 0;
   for(j=31;j>=0;j--){
-    sum += B[j]*2**compteur2;
+	
+    sum += B[j]*pow(2,compteur2);
     compteur2++;
   }
   return sum;
