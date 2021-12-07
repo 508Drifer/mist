@@ -1,10 +1,10 @@
-#ifndef __FONCTIONS_H__
-#define __FONCTIONS_H__
+#ifndef __FONCTION_H__
+#define __FONCTION_H__
 
+#define _GNU_SOURCE
+#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-
-int BinToHex();
-
+#include <math.h>
+int add(char *T,int n);
 #endif
