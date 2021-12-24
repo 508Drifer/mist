@@ -7,5 +7,6 @@
 #include <math.h>
 
 int add(char *T, int n);
+int addi(char *T, int n);
 
 #endif
