@@ -37,9 +37,15 @@ int main(int argc, char *argv[]){
    //   }
 
 
-     if ((c[i-3]=='A')&(c[i-2]=='D')&(c[i-1]=='D')) {
-	printf("%x\n", add(line,i+1));
+    if ((c[i-3]=='A')&(c[i-2]=='D')&(c[i-1]=='D')) {
+	    printf("%x\n", add(line,i+1));
       } 
+    else if ((c[i-4]=='A')&(c[i-3]=='D')&(c[i-2]=='D')&(c[i-1]=='I')) {
+      printf("%x\n", addi(line, i+1));
+    }
+    else if ((c[i-3]=='S')&(c[i-2]=='U')&(c[i-1]=='B')) {
+      printf("%x\n", sub(line, i+1));
+    }
       
 	
       
