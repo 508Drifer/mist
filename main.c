@@ -1,4 +1,4 @@
-#include  "fonction.h"
+#include  "fonctions.h"
 
 
 int main(int argc, char *argv[]){
@@ -8,7 +8,6 @@ int main(int argc, char *argv[]){
   size_t len = 0;
   ssize_t read;
   int i=0;
-  int A=501;
   int j=0;
   char tline[50];
   fic = fopen(argv[1],"r");
@@ -32,14 +31,14 @@ int main(int argc, char *argv[]){
 
       }
       
-     while(line[j]!='\0'){
-	      tline[j]=line[j];
-	      j=j+1;
-      }
+    // while(line[j]!='\0'){
+	//      tline[j]=line[j];
+	//      j=j+1;
+   //   }
 
 
-     if ((c[i-3]=='a')&(c[i-2]=='d')&(c[i-1]=='d')) {
-	printf("%x", add(tline,i+1));
+     if ((c[i-3]=='A')&(c[i-2]=='D')&(c[i-1]=='D')) {
+	printf("%x\n", add(line,i+1));
       } 
       
 	

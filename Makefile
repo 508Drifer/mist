@@ -1,14 +1,12 @@
-BIN = mist
-
-OBJECTS=main.o fonction.o
-CC=gcc
+CC = gcc
+FLAGS = -lm -g
+OBJECTS = main.o fonctions.o 
 
 all: $(OBJECTS)
-	$(CC) $(OBJECTS) -lm -o $(BIN)
+	$(CC) $(OBJECTS) -lm -o main
 
-main.o: main.c
-	gcc -c main.c -Wall -ansi -pedantic -o main.o
-	
-fonction.o: fonction.c fonction.h
-	gcc -c fonction.c -Wall -ansi -pedantic -o fonction.o
+main.o: main.c 
+	$(CC) $(FLAGS) -c main.c 
 
+fonctions.o: fonctions.c 
+	$(CC) $(FLAGS) -c fonctions.c
