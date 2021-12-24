@@ -1,5 +1,5 @@
 CC = gcc
-FLAGS = -lm -g
+FLAGS = -Wall -ansi -pedantic -lm -g
 OBJECTS = main.o fonctions.o 
 
 all: $(OBJECTS)
