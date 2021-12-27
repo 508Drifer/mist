@@ -354,8 +354,9 @@ int mult(char T[32], int n){
   int k=n;
   int decimal;
   int bin_temp1[5];
-  char temp[6];
-  char temp_bis[5];
+  char temp[10];
+  char temp_bis1[10];
+  char temp_bis2[10];
   int constant = 0;
   int compteur2 = 0;
   int sum = 0;
@@ -380,8 +381,8 @@ int mult(char T[32], int n){
   }
 
   if((temp[0] == '$')&&(compteur1 == 2)){
-    temp_bis[0] = temp[1];
-    decimal = atoi(temp_bis);
+    temp_bis1[0] = temp[1];
+    decimal = atoi(temp_bis1);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -407,9 +408,9 @@ int mult(char T[32], int n){
   }
   
   else if((temp[0] == '$')&&(compteur1 > 2)){
-    temp_bis[0] = temp[1];
-    temp_bis[1] = temp[2];
-    decimal = atoi(temp_bis);
+    temp_bis2[0] = temp[1];
+    temp_bis2[1] = temp[2];
+    decimal = atoi(temp_bis2);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -452,8 +453,9 @@ int DIV(char T[32], int n){
   int k=n;
   int decimal;
   int bin_temp1[5];
-  char temp[6];
-  char temp_bis[5];
+  char temp[10];
+  char temp_bis1[10];
+  char temp_bis2[10];
   int constant = 0;
   int compteur2 = 0;
   int sum = 0;
@@ -479,8 +481,8 @@ int DIV(char T[32], int n){
   }
 
   if((temp[0] == '$')&&(compteur1 == 2)){
-    temp_bis[0] = temp[1];
-    decimal = atoi(temp_bis);
+    temp_bis1[0] = temp[1];
+    decimal = atoi(temp_bis1);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -506,9 +508,9 @@ int DIV(char T[32], int n){
   }
   
   else if((temp[0] == '$')&&(compteur1 > 2)){
-    temp_bis[0] = temp[1];
-    temp_bis[1] = temp[2];
-    decimal = atoi(temp_bis);
+    temp_bis2[0] = temp[1];
+    temp_bis2[1] = temp[2];
+    decimal = atoi(temp_bis2);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -551,8 +553,9 @@ int and(char T[32], int n){
   int k=n;
   int decimal;
   int bin_temp1[5];
-  char temp[6];
-  char temp_bis[5];
+  char temp[10];
+  char temp_bis1[10];
+  char temp_bis2[10];
   int constant = 0;
   int compteur2 = 0;
   int sum = 0;
@@ -577,8 +580,8 @@ int and(char T[32], int n){
   }
 
   if((temp[0] == '$')&&(compteur1 == 2)){
-    temp_bis[0] = temp[1];
-    decimal = atoi(temp_bis);
+    temp_bis1[0] = temp[1];
+    decimal = atoi(temp_bis1);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -611,9 +614,9 @@ int and(char T[32], int n){
   }
   
   else if((temp[0] == '$')&&(compteur1 > 2)){
-    temp_bis[0] = temp[1];
-    temp_bis[1] = temp[2];
-    decimal = atoi(temp_bis);
+    temp_bis2[0] = temp[1];
+    temp_bis2[1] = temp[2];
+    decimal = atoi(temp_bis1);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -663,8 +666,9 @@ int or(char T[32], int n){
   int k=n;
   int decimal;
   int bin_temp1[5];
-  char temp[6];
-  char temp_bis[5];
+  char temp[10];
+  char temp_bis1[10];
+  char temp_bis2[10];
   int constant = 0;
   int compteur2 = 0;
   int sum = 0;
@@ -690,8 +694,8 @@ int or(char T[32], int n){
   }
 
   if((temp[0] == '$')&&(compteur1 == 2)){
-    temp_bis[0] = temp[1];
-    decimal = atoi(temp_bis);
+    temp_bis1[0] = temp[1];
+    decimal = atoi(temp_bis1);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -724,9 +728,9 @@ int or(char T[32], int n){
   }
   
   else if((temp[0] == '$')&&(compteur1 > 2)){
-    temp_bis[0] = temp[1];
-    temp_bis[1] = temp[2];
-    decimal = atoi(temp_bis);
+    temp_bis2[0] = temp[1];
+    temp_bis2[1] = temp[2];
+    decimal = atoi(temp_bis2);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -776,8 +780,9 @@ int xor(char T[32], int n){
   int k=n;
   int decimal;
   int bin_temp1[5];
-  char temp[6];
-  char temp_bis[5];
+  char temp[10];
+  char temp_bis1[10];
+  char temp_bis2[10];
   int constant = 0;
   int compteur2 = 0;
   int sum = 0;
@@ -803,8 +808,8 @@ int xor(char T[32], int n){
   }
 
   if((temp[0] == '$')&&(compteur1 == 2)){
-    temp_bis[0] = temp[1];
-    decimal = atoi(temp_bis);
+    temp_bis1[0] = temp[1];
+    decimal = atoi(temp_bis1);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -837,9 +842,9 @@ int xor(char T[32], int n){
   }
   
   else if((temp[0] == '$')&&(compteur1 > 2)){
-    temp_bis[0] = temp[1];
-    temp_bis[1] = temp[2];
-    decimal = atoi(temp_bis);
+    temp_bis2[0] = temp[1];
+    temp_bis2[1] = temp[2];
+    decimal = atoi(temp_bis2);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -889,8 +894,9 @@ int slt(char T[32], int n){
   int k=n;
   int decimal;
   int bin_temp1[5];
-  char temp[6];
-  char temp_bis[5];
+  char temp[10];
+  char temp_bis1[10];
+  char temp_bis2[10];
   int constant = 0;
   int compteur2 = 0;
   int sum = 0;
@@ -916,8 +922,8 @@ int slt(char T[32], int n){
   }
 
   if((temp[0] == '$')&&(compteur1 == 2)){
-    temp_bis[0] = temp[1];
-    decimal = atoi(temp_bis);
+    temp_bis1[0] = temp[1];
+    decimal = atoi(temp_bis1);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -950,9 +956,9 @@ int slt(char T[32], int n){
   }
   
   else if((temp[0] == '$')&&(compteur1 > 2)){
-    temp_bis[0] = temp[1];
-    temp_bis[1] = temp[2];
-    decimal = atoi(temp_bis);
+    temp_bis2[0] = temp[1];
+    temp_bis2[1] = temp[2];
+    decimal = atoi(temp_bis2);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -1003,8 +1009,9 @@ int beq(char T[32], int n){
   int decimal;
   int bin_temp1[5];
   int bin_temp2[16];
-  char temp[6];
-  char temp_bis[5];
+  char temp[10];
+  char temp_bis1[10];
+  char temp_bis2[10];
   int constant = 0;
   int compteur2 = 0;
   int sum = 0;
@@ -1033,8 +1040,8 @@ int beq(char T[32], int n){
   }
 
   if((temp[0] == '$')&&(compteur1 == 2)){  /* si on a mis que le $ et un caractère car si c'est supérieur à 2 ça signifie qu'on a mis une valeur supérieure à 10*/
-    temp_bis[0] = temp[1];
-    decimal = atoi(temp_bis);
+    temp_bis1[0] = temp[1];
+    decimal = atoi(temp_bis1);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -1063,9 +1070,9 @@ int beq(char T[32], int n){
   else if ((temp[0] == '$')&&(compteur1 > 2)){
     /* decimal = (int)temp[0];
     decimal = decimal - 48; */
-    temp_bis[0] = temp[1];
-    temp_bis[1] = temp[2];
-    decimal = atoi(temp_bis);
+    temp_bis2[0] = temp[1];
+    temp_bis2[1] = temp[2];
+    decimal = atoi(temp_bis2);
     j=0;
     while(decimal/2 > 0){
       bin_temp1[j] = decimal%2;
@@ -1125,8 +1132,9 @@ int bne(char T[32], int n){
   int decimal;
   int bin_temp1[5];
   int bin_temp2[16];
-  char temp[6];
-  char temp_bis[5];
+  char temp[10];
+  char temp_bis1[10];
+  char temp_bis2[10];
   int constant = 0;
   int compteur2 = 0;
   int sum = 0;
@@ -1156,8 +1164,8 @@ int bne(char T[32], int n){
   }
 
   if((temp[0] == '$')&&(compteur1 == 2)){  /* si on a mis que le $ et un caractère car si c'est supérieur à 2 ça signifie qu'on a mis une valeur supérieure à 10*/
-    temp_bis[0] = temp[1];
-    decimal = atoi(temp_bis);
+    temp_bis1[0] = temp[1];
+    decimal = atoi(temp_bis1);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -1186,9 +1194,9 @@ int bne(char T[32], int n){
   else if ((temp[0] == '$')&&(compteur1 > 2)){
     /* decimal = (int)temp[0];
     decimal = decimal - 48; */
-    temp_bis[0] = temp[1];
-    temp_bis[1] = temp[2];
-    decimal = atoi(temp_bis);
+    temp_bis2[0] = temp[1];
+    temp_bis2[1] = temp[2];
+    decimal = atoi(temp_bis2);
     j=0;
     while(decimal/2 > 0){
       bin_temp1[j] = decimal%2;
@@ -1248,8 +1256,9 @@ int bgtz(char T[32], int n){
   int decimal;
   int bin_temp1[5];
   int bin_temp2[16];
-  char temp[6];
-  char temp_bis[5];
+  char temp[10];
+  char temp_bis1[10];
+  char temp_bis2[10];
   int constant = 0;
   int compteur2 = 0;
   int sum = 0;
@@ -1280,8 +1289,8 @@ int bgtz(char T[32], int n){
   }
 
   if((temp[0] == '$')&&(compteur1 == 2)){  /* si on a mis que le $ et un caractère car si c'est supérieur à 2 ça signifie qu'on a mis une valeur supérieure à 10*/
-    temp_bis[0] = temp[1];
-    decimal = atoi(temp_bis);
+    temp_bis1[0] = temp[1];
+    decimal = atoi(temp_bis1);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -1303,9 +1312,9 @@ int bgtz(char T[32], int n){
   else if ((temp[0] == '$')&&(compteur1 > 2)){
     /* decimal = (int)temp[0];
     decimal = decimal - 48; */
-    temp_bis[0] = temp[1];
-    temp_bis[1] = temp[2];
-    decimal = atoi(temp_bis);
+    temp_bis2[0] = temp[1];
+    temp_bis2[1] = temp[2];
+    decimal = atoi(temp_bis2);
     j=0;
     while(decimal/2 > 0){
       bin_temp1[j] = decimal%2;
@@ -1360,8 +1369,9 @@ int blez(char T[32], int n){
   int decimal;
   int bin_temp1[5];
   int bin_temp2[16];
-  char temp[6];
-  char temp_bis[5];
+  char temp[10];
+  char temp_bis1[10];
+  char temp_bis2[10];
   int constant = 0;
   int compteur2 = 0;
   int sum = 0;
@@ -1391,8 +1401,8 @@ int blez(char T[32], int n){
   }
 
   if((temp[0] == '$')&&(compteur1 == 2)){  /* si on a mis que le $ et un caractère car si c'est supérieur à 2 ça signifie qu'on a mis une valeur supérieure à 10*/
-    temp_bis[0] = temp[1];
-    decimal = atoi(temp_bis);
+    temp_bis1[0] = temp[1];
+    decimal = atoi(temp_bis1);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -1414,9 +1424,9 @@ int blez(char T[32], int n){
   else if ((temp[0] == '$')&&(compteur1 > 2)){
     /* decimal = (int)temp[0];
     decimal = decimal - 48; */
-    temp_bis[0] = temp[1];
-    temp_bis[1] = temp[2];
-    decimal = atoi(temp_bis);
+    temp_bis2[0] = temp[1];
+    temp_bis2[1] = temp[2];
+    decimal = atoi(temp_bis2);
     j=0;
     while(decimal/2 > 0){
       bin_temp1[j] = decimal%2;
@@ -1471,8 +1481,9 @@ int lui(char T[32], int n){
   int decimal;
   int bin_temp1[5];
   int bin_temp2[16];
-  char temp[6];
-  char temp_bis[5];
+  char temp[10];
+  char temp_bis1[10];
+  char temp_bis2[10];
   int constant = 0;
   int compteur2 = 0;
   int sum = 0;
@@ -1504,8 +1515,8 @@ int lui(char T[32], int n){
   }
 
   if((temp[0] == '$')&&(compteur1 == 2)){  /* si on a mis que le $ et un caractère car si c'est supérieur à 2 ça signifie qu'on a mis une valeur supérieure à 10*/
-    temp_bis[0] = temp[1];
-    decimal = atoi(temp_bis);
+    temp_bis1[0] = temp[1];
+    decimal = atoi(temp_bis1);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -1527,9 +1538,9 @@ int lui(char T[32], int n){
   else if ((temp[0] == '$')&&(compteur1 > 2)){
     /* decimal = (int)temp[0];
     decimal = decimal - 48; */
-    temp_bis[0] = temp[1];
-    temp_bis[1] = temp[2];
-    decimal = atoi(temp_bis);
+    temp_bis2[0] = temp[1];
+    temp_bis2[1] = temp[2];
+    decimal = atoi(temp_bis2);
     j=0;
     while(decimal/2 > 0){
       bin_temp1[j] = decimal%2;
@@ -1583,8 +1594,9 @@ int sll(char T[32], int n){
   int k=n;
   int decimal;
   int bin_temp1[5];
-  char temp[6];
-  char temp_bis[5];
+  char temp[10];
+  char temp_bis1[10];
+  char temp_bis2[10];
   int constant = 0;
   int compteur2 = 0;
   int sum = 0;
@@ -1608,8 +1620,8 @@ int sll(char T[32], int n){
   }
 
   if((temp[0] == '$')&&(compteur1 == 2)){
-    temp_bis[0] = temp[1];
-    decimal = atoi(temp_bis);
+    temp_bis1[0] = temp[1];
+    decimal = atoi(temp_bis1);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -1642,9 +1654,9 @@ int sll(char T[32], int n){
   }
   
   else if((temp[0] == '$')&&(compteur1 > 2)){
-    temp_bis[0] = temp[1];
-    temp_bis[1] = temp[2];
-    decimal = atoi(temp_bis);
+    temp_bis2[0] = temp[1];
+    temp_bis2[1] = temp[2];
+    decimal = atoi(temp_bis2);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -1694,8 +1706,9 @@ int srl(char T[32], int n){
   int k=n;
   int decimal;
   int bin_temp1[5];
-  char temp[6];
-  char temp_bis[5];
+  char temp[10];
+  char temp_bis1[10];
+  char temp_bis2[10];
   int constant = 0;
   int compteur2 = 0;
   int sum = 0;
@@ -1720,8 +1733,8 @@ int srl(char T[32], int n){
   }
 
   if((temp[0] == '$')&&(compteur1 == 2)){
-    temp_bis[0] = temp[1];
-    decimal = atoi(temp_bis);
+    temp_bis1[0] = temp[1];
+    decimal = atoi(temp_bis1);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -1754,9 +1767,9 @@ int srl(char T[32], int n){
   }
   
   else if((temp[0] == '$')&&(compteur1 > 2)){
-    temp_bis[0] = temp[1];
-    temp_bis[1] = temp[2];
-    decimal = atoi(temp_bis);
+    temp_bis2[0] = temp[1];
+    temp_bis2[1] = temp[2];
+    decimal = atoi(temp_bis2);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -1813,8 +1826,9 @@ int mfhi(char T[32], int n){
   int k=n;
   int decimal;
   int bin_temp1[5];
-  char temp[6];
-  char temp_bis[5];
+  char temp[10];
+  char temp_bis1[10];
+  char temp_bis2[10];
   int constant = 0;
   int compteur2 = 0;
   int sum = 0;
@@ -1838,8 +1852,8 @@ int mfhi(char T[32], int n){
   }
 
   if((temp[0] == '$')&&(compteur1 == 2)){
-    temp_bis[0] = temp[1];
-    decimal = atoi(temp_bis);
+    temp_bis1[0] = temp[1];
+    decimal = atoi(temp_bis1);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -1856,9 +1870,9 @@ int mfhi(char T[32], int n){
   }
 
   else if((temp[0] == '$')&&(compteur1 > 2)){
-    temp_bis[0] = temp[1];
-    temp_bis[1] = temp[2];
-    decimal = atoi(temp_bis);
+    temp_bis2[0] = temp[1];
+    temp_bis2[1] = temp[2];
+    decimal = atoi(temp_bis2);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -1891,8 +1905,9 @@ int mflo(char T[32], int n){
   int k=n;
   int decimal;
   int bin_temp1[5];
-  char temp[6];
-  char temp_bis[5];
+  char temp[10];
+  char temp_bis1[10];
+  char temp_bis2[10];
   int constant = 0;
   int compteur2 = 0;
   int sum = 0;
@@ -1917,8 +1932,8 @@ int mflo(char T[32], int n){
   }
 
   if((temp[0] == '$')&&(compteur1 == 2)){
-    temp_bis[0] = temp[1];
-    decimal = atoi(temp_bis);
+    temp_bis1[0] = temp[1];
+    decimal = atoi(temp_bis1);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
@@ -1935,9 +1950,9 @@ int mflo(char T[32], int n){
   }
 
   else if((temp[0] == '$')&&(compteur1 > 2)){
-    temp_bis[0] = temp[1];
-    temp_bis[1] = temp[2];
-    decimal = atoi(temp_bis);
+    temp_bis2[0] = temp[1];
+    temp_bis2[1] = temp[2];
+    decimal = atoi(temp_bis2);
     j=0;
     /*decimal = atoi(temp[1]);*/ /* convertir char en int */
     while(decimal/2 > 0){
