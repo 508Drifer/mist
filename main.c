@@ -1,56 +1,117 @@
-#include  "fonction.h"
+#define _GNU_SOURCE
+#include  "fonctions.h"
 
 
 int main(int argc, char *argv[]){
-  FILE *fic;
+  FILE *fic1;
+  FILE *fic2;
   char c[50];
-  char *line = NULL;
   size_t len = 0;
-  ssize_t read;
+  ssize_t read = 0;
+  char line[32];
   int i=0;
-  int A=501;
+  char *result;
+  fic1 = fopen(argv[1],"r");
+  fic2 = fopen(argv[2], "w");
+  int test;
   int j=0;
-  char tline[50];
-  fic = fopen(argv[1],"r");
+  int k=0;
+  int registre[32][32];
 	
+  for(j=0;j<32;j++){
+	for(k=0;k<32;k++){
+		registre[j][k] = 0;
+	}
+  }
+registre[5][6]=1;
 	
-  if(fic==NULL){
+  if(fic1==NULL){
+    printf("Erreur lors de la lecture du fichier");
+    exit(1);
+  }
+  if(fic2==NULL){
     printf("Erreur lors de la lecture du fichier");
     exit(1);
   }
   
-
-
-  while((read = getline(&line,&len,fic)) != -1){
-    /*printf("%zu", read);*/
-
-    while(line[i]!=' '){
-
-      c[i] = line[i];
-		
-	i++;
-
-      }
-      
-     while(line[j]!='\0'){
-	      tline[j]=line[j];
-	      j=j+1;
-      }
-
-
-     if ((c[i-3]=='a')&(c[i-2]=='d')&(c[i-1]=='d')) {
-	printf("%x", add(tline,i+1));
+  fgets(line, 32, fic1);
+  
+  while(!feof(fic1)){
+    
+    
+    while((line[i]!=' ')&&(line[i]!='\n')&&(line[i]!='\r')&&(line[i] !='#')){
+      c[i] = line[i];		
+      i++;
+    }
+    if ((c[i-3]=='A')&&(c[i-2]=='D')&&(c[i-1]=='D')) {
+	    fprintf(fic2, "%08X\n", add(line,i+1));
+	    test = lectureregistre(line,i+1,registre);
+	    printf("\n%d\n",test);
       } 
-      
-	
-      
-	/*if ((c[i-3]=='s')&(c[i-2]=='u')&(c[i-1]=='b')) {
-      
-	}*/
-      
-      j=0;
-      i=0;
+    else if ((c[i-4]=='A')&&(c[i-3]=='D')&&(c[i-2]=='D')&&(c[i-1]=='I')) {
+      fprintf(fic2, "%08X\n", addi(line, i+1));
+    }
+    else if ((c[i-3]=='S')&&(c[i-2]=='U')&&(c[i-1]=='B')) {
+      fprintf(fic2, "%08X\n", sub(line, i+1));
+    }
+    else if ((c[i-4]=='M')&&(c[i-3]=='U')&&(c[i-2]=='L')&&(c[i-1]=='T')) {
+      fprintf(fic2, "%08X\n", mult(line, i+1));
+    }
+    else if ((c[i-3]=='D')&&(c[i-2]=='I')&&(c[i-1]=='V')) {
+      fprintf(fic2, "%08X\n", DIV(line, i+1));
+    }
+    else if ((c[i-3]=='A')&&(c[i-2]=='N')&&(c[i-1]=='D')) {
+      fprintf(fic2, "%08X\n", and(line, i+1));
+    }
+    else if ((c[i-2]=='O')&&(c[i-1]=='R')) {
+      fprintf(fic2, "%08X\n", or(line, i+1));
+    }
+    else if ((c[i-3]=='X')&&(c[i-2]=='O')&&(c[i-1]=='R')) {
+      fprintf(fic2, "%08X\n", xor(line, i+1));
+    }
+    else if ((c[i-3]=='B')&&(c[i-2]=='E')&&(c[i-1]=='Q')) {
+      fprintf(fic2, "%08X\n", beq(line, i+1));
+    }
+    else if ((c[i-3]=='B')&&(c[i-2]=='N')&&(c[i-1]=='E')) {
+      fprintf(fic2, "%08X\n", bne(line, i+1));
+    }
+    else if ((c[i-4]=='B')&&(c[i-3]=='G')&&(c[i-2]=='T')&&(c[i-1]=='Z')) {
+      fprintf(fic2, "%08X\n", bgtz(line, i+1));
+    }
+    else if ((c[i-4]=='B')&&(c[i-3]=='L')&&(c[i-2]=='E')&&(c[i-1]=='Z')) {
+      fprintf(fic2, "%08X\n", blez(line, i+1));
+    }
+    else if ((c[i-3]=='L')&&(c[i-2]=='U')&&(c[i-1]=='I')) {
+      fprintf(fic2, "%08X\n", lui(line, i+1));
+    }
+    else if ((c[i-3]=='S')&&(c[i-2]=='L')&&(c[i-1]=='L')) {
+      fprintf(fic2, "%08X\n", sll(line, i+1));
+    }
+    else if ((c[i-3]=='S')&&(c[i-2]=='R')&&(c[i-1]=='L')) {
+      fprintf(fic2, "%08X\n", srl(line, i+1));
+    }
+    else if ((c[i-3]=='N')&&(c[i-2]=='O')&&(c[i-1]=='P')) {
+      fprintf(fic2, "%08X\n", nop(line, i+1));
+    }
+    else if ((c[i-4]=='M')&&(c[i-3]=='F')&&(c[i-2]=='H')&&(c[i-1]=='I')) {
+      fprintf(fic2, "%08X\n", mfhi(line, i+1));
+    }
+    else if ((c[i-4]=='M')&&(c[i-3]=='F')&&(c[i-2]=='L')&&(c[i-1]=='O')) {
+      fprintf(fic2, "%08X\n", mflo(line, i+1));
+    }
+    else if ((c[i-2]=='L')&&(c[i-1]=='W')) {
+      fprintf(fic2, "%08lX\n", lw(line, i+1));
+    }
+    else if ((c[i-2]=='S')&&(c[i-1]=='W')) {
+      fprintf(fic2, "%08lX\n", sw(line, i+1));
+    }
+
+    fgets(line, 32, fic1);
+    i=0;
   }
+  
+  fclose(fic1);
+  fclose(fic2);
   return(0);
 
 
